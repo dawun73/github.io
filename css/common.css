@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+
+/*
+Theme Name: 끌디자인 (정다운)
+Version: 1.0
+*/
+
+
+/* **************************************** *
+ * FONT
+ * **************************************** */
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('font/montserrat-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('font/montserrat-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/montserrat-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/montserrat-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('font/montserrat-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('font/montserrat-v18-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+
+/* Butler */
+@font-face {
+  font-family: 'Butler_Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('font/Butler_Medium.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('font/Butler_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/Butler_Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/Butler_Medium.woff') format('woff'), /* Modern Browsers */
+       url('font/Butler_Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('font/Butler_Medium.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Butler_Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('font/Butler_Regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('font/Butler_Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/Butler_Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/Butler_Regular.woff') format('woff'), /* Modern Browsers */
+       url('font/Butler_Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('font/Butler_Regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+
+/* Common CSS
+ * --------------------------------------- */
+ *, *:after, *:before {
+	box-sizing: border-box;
+     -webkit-transition: all 0.6s ease-out; -o-transition: all 0.6s ease-out; transition: all 0.6s ease-out;  
+	font-family: new-order, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+	/* word-wrap: break-word; */
+	word-break: keep-all;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+caption, legend{overflow:hidden;width:0;height:0;font-size:0;line-height:0;display: none;}
+textarea{resize:none;}
+textarea.vert{resize:vertical;}
+
+img {max-width:100%;}
+
+
+/* accessibility */ 
+#accessibility{position:absolute; left:0; top:0; width:100%; z-index:9999;}
+#accessibility li{position:absolute; left:0; top:0; width:100%; z-index:9999;}
+#accessibility a{overflow:hidden; display:block; width:1px; height:1px; margin-bottom:-1px; color:#444; font-size:0; text-decoration:none;}
+#accessibility a:active, #accessibility a:focus{width:100%; height:auto; padding:5px 0; background:#303030;  font-size:14px; text-align:center; color:#fff;}
+
+
+.sr-only {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;}
+.mt0 {margin-top:0 !important;}
+.mb0 {margin-bottom:0 !important;}
+
+.text-center {text-align:center;}
+.text-left {text-align:left;}
+.text-right {text-align:right;}
+
+.text_blue{color:#008bd5 !important;}
+
+.tit_new {background:url(../images/common/ico_new.png) no-repeat; background-position:right; padding-right:30px;} /*NEW 아이콘*/
+
+/* 버튼 */
+.btn {display:inline-block; padding:7px 18px; color:#fff; font-weight:bold; font-size:0.95em; border-radius:1px; letter-spacing:0;} /* 보통 버튼사이즈 */
+.l_btn {display:inline-black; padding:13px 45px; color:#fff; font-weight:bold; font-size:1.1em; border-radius:1px; letter-spacing:0;} /* 큰 버튼사이즈 */
+.s_btn {display:inline-block; padding:4px 15px; color:#fff; font-weight:bold; font-size:0.88em !important; border-radius:1px; letter-spacing:0;} /* 작은 버튼사이즈 */
+.btn:hover, .btn:focus, .btn:active,
+.s_btn:hover, .s_btn:focus, .s_btn:active,
+.l_btn:hover, .l_btn:focus, .l_btn:active
+{color:#fff;}
+.btn_navy {background:#3c4c6f;}
+.btn_navy:hover, .btn_navy:focus, .btn_navy:active {background:#223557;}
+.btn_gray {background:#929fb8;}
+.btn_gray:hover, .btn_gray:focus, .btn_gray:active {background:#78859d;}
+.btn_black {background:#111;}
+.btn_black:hover, .btn_black:focus, .btn_black:active {background:#2f2f2f;}
+.btn_blue {background:#102693;}
+.btn_blue:hover, .btn_blue:focus, .btn_blue:active {background:#001479;}
+.btn_skyblue {background:#289be0;}
+.btn_skyblue:hover, .btn_skyblue:focus, .btn_skyblue:active {background:#0086c9;}
+.btn_pink {background:#e42c53;}
+.btn_pink:hover, .btn_pink:focus, .btn_pink:active {background:#cd0043;}
+.btn_white {background:#fff; color:#333; border:1px solid #ccc;}
+.btn_white:hover, .btn_white:focus, .btn_white:active {background:#eaeaea; color:#222; border:1px solid #bbb;}
+
+
+/**** 모바일 ****/
+@media (max-width:767px) {
+	
+	.mt0 {margin-top:0 !important;}
+	.mb0 {margin-bottom:0 !important;}
+}
